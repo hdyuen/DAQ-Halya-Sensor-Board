@@ -1,4 +1,5 @@
 #include "Adafruit_MS8607.h"
+#include "pinConfig.hpp"
 #include <iostream>
 
 #ifndef PHT_HPP;

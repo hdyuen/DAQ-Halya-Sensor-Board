@@ -2,7 +2,7 @@
 
 class Ammeter {
 private:
-  Adafruit_INA219 ina219;
+  //Adafruit_INA219 ina219;
 
 public:
   Ammeter() {
@@ -16,6 +16,7 @@ public:
         delay(10);
       }
     }
+    Wire.begin(INA_SDA, INA_SCL);
     ina219.setCalibration_32V_2A();
   }
 

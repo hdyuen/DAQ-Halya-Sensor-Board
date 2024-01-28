@@ -1,8 +1,10 @@
 #include "Adafruit_INA219.h"
+#include "pinConfig.hpp"
 #include <iostream>
 
 class Ammeter{
 private:
+    Adafruit_INA219 ina219;
 
 public:
     Ammeter();

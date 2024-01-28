@@ -1,10 +1,7 @@
-#include PHT.hpp
-
+#include "PHT.hpp"
 class PHT {
 private:
-  Adafruit_MS8607 ms8607;
-  //const int PHT_SCL = 14;
-  //const int PHT_SDA = 13; 
+  
 
 public:
   PHT() {
@@ -13,7 +10,7 @@ public:
   }
 
   void begin() {
-    Wire.begin();
+    Wire.begin(PHT_SDA, PHT_SCL);
     if (!ms8607.begin()) {
       Serial.println("Failed to find MS8607 chip");
       while (1) { delay(10); }
